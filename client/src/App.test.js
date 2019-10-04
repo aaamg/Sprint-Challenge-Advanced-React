@@ -7,3 +7,14 @@ it('renders without crashing', () => {
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+test('renders country', async () => {
+  const { findByText } = await render(<App />);
+  findByText(/United States/i);
+});
+
+test('renders country', () => {
+  const { findByText } = render(<App />);
+  findByText(/France/i);
+});
+
