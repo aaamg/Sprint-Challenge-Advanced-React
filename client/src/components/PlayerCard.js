@@ -1,22 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import styled from "styled-components";
+import Card from "react-bootstrap/Card";
+import './PlayerCard.css'
 
-const Container = styled.div`
-  width: 400px;
-  margin: auto;
-  border: 2px solid black;
-  margin-bottom: 2rem;
-`;
-
-function Card(props) {
+function TheCard(props) {
   return( 
-   <Container>   
+   <div className="contain">   
     <p>Player: {props.item.name}</p>
     <p>Country: {props.item.country}</p>
     <p>Searches: {props.item.searches}</p>
-  </Container>
+    </div>
   );
 }
 
-export default Card;
+export default TheCard;
+
+
+{/* <Card style={{ width: '18rem' }}>
+    <Card.Body>
+        <Card.Title>Player: {props.item.name}</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted">Country: {props.item.country}</Card.Subtitle>
+        <Card.Text><p>Searches: {props.item.searches}</p></Card.Text>
+        <Card.Link href="#">Card Link</Card.Link>
+        <Card.Link href="#">Another Link</Card.Link>
+    </Card.Body>
+    </Card> */}

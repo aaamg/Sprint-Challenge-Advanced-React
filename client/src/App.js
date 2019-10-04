@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import ReactDOM from "react-dom";
-import Card from "./components/PlayerCard";
+import TheCard from "./components/PlayerCard";
 
 
 const url = `http://localhost:5000/api/players`;
@@ -36,7 +36,7 @@ class App extends Component {
       <div>
         <h2>Players Data</h2>
         {this.state.playerdata.map(item => {
-          return <Card item={item}/>
+          return <TheCard item={item}/>
         })}
       </div>
     );
